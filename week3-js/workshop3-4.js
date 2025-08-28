@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 product = [
     {
         price : 100,
@@ -32,21 +31,3 @@ function calculateTotal(){
     });
 }
 calculateTotal();
-=======
-product = {
-    price : 100,
-    discount : (10/100),
-    price : 200,
-    discount : (10/100),
-    price : 300,
-    discount : (10/100),
-    price : 400,
-    discount : (10/100),
-    price : 500,
-    discount : (10/100),
-}
-
-function calculateTotal(){
-    
-}
->>>>>>> d2732776eba594c973988dc40b401e693e6a17c4
