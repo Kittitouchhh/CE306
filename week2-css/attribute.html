@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        input[type]{
+            background-color:aqua;
+        }
+        a[target]{
+            color: black;
+        }
+        [title~="PAGE"]{/*เลือก elemeny ทีมี attribute title ที่มีคำว่า page เป็นคำแยก*/
+            font-size: 30px;
+        }
+    </style>
+    <a href="#" target="_blank">google</a><br>
+    <a href="#">youtube</a><br>
+    <input type="text" value="1"> <br>
+    <input type="password" value="11"><br>
+    <p title="PAGE">PAGE</p>
+    <p title="NPAGE">NPAGE</p>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างหน้าเว็บพื้นฐาน</title>
+</head>
+<body>
+    <header>
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
+        <p>เว็บไซต์ตัวอย่างสำหรับเรียนรู้พื้นฐาน HTML</p>
+    </header>
+    <section>
+        <h2>โปรไฟล์ของฉัน</h2>
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/cbc1/live/74fe8e20-5170-11ed-ac87-630245663c6a.png.webp" alt="รูปโปร" width="300">
+        <p>ชื่อ: กัส สุดหล่อ</p>
+        <p>อาชีพ: คนหล่อเขียนเว็บ</p>
+        <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+    </section>
+
+    <hr />
+    <section>
+        <h2>สมัครสมาชิค</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="ชื่อนามสกุล">ชื่อ-นามสกุล</label>
+                <input type="text" id="fullname" name="fullname" required />  <!-- required มีไว้ใส่ที่ต้องกรอก-->
+            </div>
+            <div>
+                <label for="email">อีเมล</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="gender">เพศ</label>
+                <select id="gender" name="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div>
+                <label for="about">ข้อมูลเพิ่มเติม</label>
+                <textarea name="about" id="about" rows="4" cols="40"></textarea>  <!-- textarea กรอกเเบบขึ้นบรรทัดใหม่ได้ เเละ ตั้งขนาดเองได้--> <!--row เเนวตั้ง cols จำนวนเเนวนอน-->>
+            </div>
+            <div>
+                <label for="photo">อัปรูปหน่อยจ้า</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+            <div>
+                <button type="submit">ส่งๆๆๆ</button>
+            </div>
+        </form>
+    </section>
+    <table border="1" cellpadding="8">    <!-- colspan = 2 = ในtr จะกินพื้นที่2อัน-->>
+        <thead>
+            <tr>
+                <th>ลำดับ</th>
+                <th>สินค้า</th>
+                <th>จำนวน</th>
+                <th>ราคา/ชิ้น</th>
+                <th>ราคารวม</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>หนังสือ HTML พื้นฐาน</td>
+                <td>1</td>
+                <td>250</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>คอร์สเรียน JavaScript</td>
+                <td>1</td>
+                <td>1200</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>เสื้อยืดเขียนโค้ด</td>
+                <td>2</td>
+                <td>300</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Mouse ไร้สาย</td>
+                <td>1</td>
+                <td>450</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>หนังสือ HTML พื้นฐาน</td>
+                <td>3</td>
+                <td>50</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table border="1" cellpadding="8">       <!--ระยะห่าง cell กับเนื้อหา-->
+        <thead>
+            <tr>
+                <th>ลำดับ</th>
+                <th>ชื่อ</th>
+                <th colspan="2">ข้อมูลติดต่อ</th>     <!--col(rum) กินพื้นที่เเนวตั้ง-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">กัส สุดหล่อ</td>  <!--row กินพื้นที่เเนวนอน-->
+                <td>อีเมล</td>
+                <td>sudlhor@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Phone-numbers</td>
+                <td>099-999-9999</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

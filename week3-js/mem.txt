@@ -1,0 +1,112 @@
+alt + ทิศลงล่าง
+Operators
+    Arithmetic Operators = พวกบวกลบคูณหาร
+    Assignment Operators = ตัวดำเนินการกำหนดค่า
+
+    Comparison Operators = ตัวเปรียบเทียบ
+    เช่น  ==    ===   !=  > < >= <=
+    == เท่ากับ   === เท่ากับเเละชนิดเดียวกัน 
+
+    String Operators = ตัวอักษร
+
+    logical Operators = ดำเนินการทางตรรกะ
+        && And,และ    || Or,หรือ   ! Not,ไม่
+
+    Ternary Operators = ตัวดำเนินการไตรภาค
+        let score = 80;
+        let grade = (score >= 80 ) ? "A" : "B" ;
+        console.log("grade",grade);
+
+    Type Operators = ประเภท type of นู่นนั่นนี่
+
+Conditionals
+    if ถ้าเเล้ว
+
+    if 
+    else สองทางเลือก
+
+    if 
+    else if หลายทางเลือก
+
+switch ระบุล็อกโค้ดทางเลือกจำนวนมากที่จะดำเนินการ
+        การแยกเคส
+            switch(ค่าที่เปรียบเทียบ){
+                case ค่าที่1:
+                    คำสั่ง
+                    break; //ออกจาก switch
+                case ค่าที่2:
+                    คำสั่ง
+                    break; 
+                default:
+                //กรณีไม่ตรงกับทุก case
+            }
+        การรวมหลายเคส
+            const letter  = 'q';
+            switch(letter.toLowerCase()){
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    console.log('เป็นสระ');
+                    break;
+                default:
+                    console.log('ไม่ใช่สระ')    
+            }
+
+DATATYPE
+    1.String
+    2.Number
+    3.Boolean
+    4.Null         ค่าว่างเปล่า
+    5.Underfined   กำหนดค่าไม่ได้
+
+    6.Object เชื่อมหน้าบ้านหลังบ้าน call it json
+        let Object = { name : "Gus", age;20}
+
+    7.Array = [1,2,3]
+
+Loop
+    for loop 
+    for (let i = 1; i <= 10; i++){
+        console.log(i)
+    }
+
+    while loop 
+    let j = 1;
+    while (j <= 5){
+        console.log(j)
+        j++;
+    }
+
+    do while loop ทำก่อนเเล้วค่อยเช็คเงื่อนไข
+    let k = 1;
+    dp {
+        console.log(k);
+        k++
+    } while (k <= 3);
+
+function                parameters
+    gunction myFunction (a,b){
+        let result = a*b;
+        console.log(result)
+    
+    }         arguments
+    myFunction(10,2)
+
+Array Loop 
+    let fruits = ["a","b","c"];
+
+    for (let i = 0; i<fruits.lerngth; i++){
+        console.log(`Fruit ${i+1}:${fruits[i]}`)
+    }
+
+    for each
+        let fruitz = ["a","b","c"];
+        fruitz.forEach(function(fruit,index){
+            console.log(`Fruit ${index + 1}: ${fruit}`);
+        })
+
+
+
+
