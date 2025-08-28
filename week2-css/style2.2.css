@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+}
+.top-bar {
+    width: 100%;
+    height: auto; /* ให้สูงปรับตามเนื้อหา */
+    background-color: #fff;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.top-bar ul {
+    list-style: none;   
+    display: flex;      
+    gap: 30px;          
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar li a {
+    text-decoration: none; 
+    color: #333; 
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+    display: block;
+    text-align: center;
+}
+
+.top-bar li a:hover {
+    background-color: #4f0505;
+    color: #fff;
+}
+.top-bar li a.active {
+    background-color: #000; 
+    color: #db3c3c;           
+}
+.top-bar li #bbg:hover {
+    background-color: #000000;
+    color: #d16f00;
+}
+.top-bar li #clbg:hover {
+    background-color: #011f03;
+    color: #d16f00;
+}
+
+.center-deck{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;    
+    align-items: center;      
+}
+.card{
+    min-width: 300px;
+    max-width: 300px;
+    height: 350px;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 0 4px 8px gray;
+    border-radius: 15px;
+}
+.img-size{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-items: center;
+}
+img{
+    width: 100%;  
+    align-items: center;
+    object-fit: cover;
+}
+button {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgb(145, 3, 3);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.8s ease
+}
+button:active{
+    background-color: #ffffff;
+    color: rgb(255, 0, 0);
+    transform: scale(0.95);
+}
+button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+h2{
+    margin-top: 3px;
+}
+.DEMONHEAD {
+    margin-top: 15px;
+    color: aliceblue;
+    text-align: center;
+}
+.DEMONHEAD h1 {
+    font-size: 50px;
+}
+.die{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;    
+    align-items: center;  
+    margin: 20px;
+    display: flex;
+}
+.die button{
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.8s ease
+}
+.die button:hover{
+    background-color: #4a0707;
+    color: #ffffff;
+}
+.die button:active{
+    background-color: #aa0505;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+div .diemid {
+    text-align: center;
+    color: rgb(128, 10, 10);
+    font-size: 32px;
+    margin: 20px 0;
+    border-top: 2px solid gray;  
+    border-bottom: 2px solid gray;
+    padding: 10px 0;
+    flex-basis: 100%;   
+    width: 100%;        
+    text-align: center; 
+}
+.die .d {
+    color: red;
+}
+footer {
+    background-color: #fff;
+    padding: 5px 10px;
+    text-align: center;    
+}
+
+footer p {
+    margin: 5px 0;         
+    color: #333;           
+    font-size: 14px;       
+}
+#name{
+    font-weight: bold;
+    font-size: 18px;
+}
+.green{
+    color: greenyellow;
+}
+
+
+
+
+/*Responsive Layout */
+/* Desktop */
+.card {
+    flex: 1 1 300px;
+    /*
+    จดจำจำจด
+    flex: g s b
+
+    flex-grow: 1;
+    👉 บอกว่า card สามารถขยายได้ ถ้ามีพื้นที่ว่างใน container (เช่น .center-deck)
+    ถ้าเป็น 0 → card จะไม่ขยาย
+
+    flex-shrink: 1;
+    👉 บอกว่า card สามารถหดลงได้ ถ้าพื้นที่ไม่พอ (เช่นจอเล็กลง)
+    ถ้าเป็น 0 → card จะไม่หด
+
+    flex-basis: 300px;
+    👉 กำหนด “ขนาดเริ่มต้น” ของ card ไว้ที่ 300px ก่อนที่จะนำไปคำนวณ grow/shrink*/
+    
+    max-width: 300px;
+}
+
+
+/* Tablet (<=768px และ >480px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .center-deck {
+        justify-content: center;
+    }
+    .card {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Mobile (<=480px) */
+@media (max-width: 480px) {
+    .center-deck {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .top-bar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .top-bar li a {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+}
