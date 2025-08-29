@@ -19,7 +19,7 @@ student.forEach(function(student,index){
 
 function showStudentCount (){
     console.log("")
-    console.log(`นาย${student.name} ได้เกรด : ${student.grade}`);
+    console.log(`นาย ${student.name} ได้เกรด : ${student.grade}`);
 }
 
 function showStudentCount (){
