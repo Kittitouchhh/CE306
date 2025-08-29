@@ -13,9 +13,14 @@ student = [
     }
 ]
 
-student.forEach(function(student){
-    console.log(`นาย${student.name} ได้เกรด : ${student.grade}`);
+student.forEach(function(student,index){
+    console.log(`นาย  ${student.name} ได้เกรด : ${student.grade}`);
 })
+
+function showStudentCount (){
+    console.log("")
+    console.log(`นาย${student.name} ได้เกรด : ${student.grade}`);
+}
 
 function showStudentCount (){
     console.log("จำนวนนักเรียน :" +" "+ student.length + " " + "คน")
