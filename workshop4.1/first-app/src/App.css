@@ -1,0 +1,15 @@
+.HEADDD{
+  margin: 20px;
+  font-size: 100px;
+  color : white;
+  text-align: center;
+}
+.MainContent{
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+  gap: 20px;
+}
