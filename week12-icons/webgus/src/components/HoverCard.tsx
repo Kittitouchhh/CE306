@@ -1,0 +1,80 @@
+import * as HoverCard from "@radix-ui/react-hover-card";
+import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
+
+interface HoverProfileProps {
+  platform: "ig" | "facebook" | "github";
+  avatar: string;
+  name: string;
+  username?: string;
+  bio?: string;
+  followers?: number;
+  following?: number;
+  link?: string;
+}
+
+// ✅ โลโก้ของแต่ละ platform
+const platformIcons = {
+  ig: <FaInstagram className="text-pink-500 w-14 h-14" />,
+  facebook: <FaFacebook className="text-blue-600 w-14 h-14" />,
+  github: <FaGithub className="text-black w-14 h-14" />,
+};
+
+export default function HoverCardd({
+  platform,
+  avatar,
+  name,
+  username,
+  bio,
+  followers,
+  following,
+  link,
+}: HoverProfileProps) {
+  return (
+    <HoverCard.Root openDelay={100}>
+      
+      {/* ✅ Trigger ใช้โลโก้แทน avatar */}
+      <HoverCard.Trigger asChild>
+        <div className="cursor-pointer hover:scale-110 transition-transform">
+          {platformIcons[platform]}
+        </div>
+      </HoverCard.Trigger>
+
+      {/* ✅ Card เนื้อหา */}
+      <HoverCard.Content
+        className="w-[300px] p-5 rounded-xl bg-white shadow-2xl border border-gray-200"
+        sideOffset={5}
+      >
+        <div className="flex items-center gap-3">
+          <img src={avatar} className="w-12 h-12 rounded-full" />
+          <div>
+            <p className="font-semibold text-gray-900">{name}</p>
+            {username && <p className="text-sm text-gray-500">{username}</p>}
+          </div>
+        </div>
+
+        {bio && <p className="text-sm text-gray-600 mt-2">{bio}</p>}
+
+        {(followers || following) && (
+          <div className="flex gap-6 text-sm text-gray-700 mt-3">
+            {following !== undefined && <span>{following} Following</span>}
+            {followers !== undefined && (
+              <span className="font-semibold">{followers} Followers</span>
+            )}
+          </div>
+        )}
+
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            className="block bg-blue-500 text-white text-center py-1.5 mt-4 rounded hover:bg-blue-600"
+          >
+            Visit Profile
+          </a>
+        )}
+
+        <HoverCard.Arrow className="fill-white" />
+      </HoverCard.Content>
+    </HoverCard.Root>
+  );
+}
