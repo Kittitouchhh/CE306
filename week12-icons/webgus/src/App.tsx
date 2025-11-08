@@ -1,6 +1,6 @@
 import {Routes, Route } from 'react-router-dom'
-import Minigame from './pages/minigame'
-import Home from './pages/home'
+import Minigame from './pages/Minigame'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {

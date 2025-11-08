@@ -31,15 +31,13 @@ export default function HoverCardd({
 }: HoverProfileProps) {
   return (
     <HoverCard.Root openDelay={100}>
-      
-      {/* ✅ Trigger ใช้โลโก้แทน avatar */}
+
       <HoverCard.Trigger asChild>
         <div className="cursor-pointer hover:scale-110 transition-transform">
           {platformIcons[platform]}
         </div>
       </HoverCard.Trigger>
 
-      {/* ✅ Card เนื้อหา */}
       <HoverCard.Content
         className="w-[300px] p-5 rounded-xl bg-white shadow-2xl border border-gray-200"
         sideOffset={5}
@@ -52,7 +50,7 @@ export default function HoverCardd({
           </div>
         </div>
 
-        {bio && <p className="text-sm text-gray-600 mt-2">{bio}</p>}
+        {bio && <p className="text-sm text-gray-600 mt-2 m-auto w-50">{bio}</p>}
 
         {(followers || following) && (
           <div className="flex gap-6 text-sm text-gray-700 mt-3">
@@ -67,11 +65,14 @@ export default function HoverCardd({
           <a
             href={link}
             target="_blank"
-            className="block bg-blue-500 text-white text-center py-1.5 mt-4 rounded hover:bg-blue-600"
+            rel="noopener noreferrer"
+            className="no-underline block bg-black !text-white text-center py-1.5 mt-4 rounded 
+               hover:bg-gray-800 hover:!text-white transition-colors duration-300"
           >
             Visit Profile
           </a>
         )}
+
 
         <HoverCard.Arrow className="fill-white" />
       </HoverCard.Content>
