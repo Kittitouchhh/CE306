@@ -1,8 +1,9 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
-import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaGithub, FaLine} from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 interface HoverProfileProps {
-  platform: "ig" | "facebook" | "github";
+  platform: "ig" | "facebook" | "github" | "line" | "gmail";
   avatar: string;
   name: string;
   username?: string;
@@ -11,12 +12,13 @@ interface HoverProfileProps {
   following?: number;
   link?: string;
 }
-
-// ✅ โลโก้ของแต่ละ platform
 const platformIcons = {
   ig: <FaInstagram className="text-pink-500 w-14 h-14" />,
   facebook: <FaFacebook className="text-blue-600 w-14 h-14" />,
   github: <FaGithub className="text-black w-14 h-14" />,
+  line: <FaLine className="text-green-500 w-14 h-14"/>,
+  gmail: <SiGmail className="text-red-500 w-14 h-14" />
+
 };
 
 export default function HoverCardd({
@@ -33,16 +35,16 @@ export default function HoverCardd({
     <HoverCard.Root openDelay={100}>
 
       <HoverCard.Trigger asChild>
-        <div className="cursor-pointer hover:scale-110 transition-transform">
+        <div className="z-[999] cursor-pointer hover:scale-110 transition-transform">
           {platformIcons[platform]}
         </div>
       </HoverCard.Trigger>
 
       <HoverCard.Content
-        className="w-[300px] p-5 rounded-xl bg-white shadow-2xl border border-gray-200"
+        className="z-[999] w-[300px] p-5 rounded-xl bg-white shadow-2xl border border-gray-200"
         sideOffset={5}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 z-[999]">
           <img src={avatar} className="w-12 h-12 rounded-full" />
           <div>
             <p className="font-semibold text-gray-900">{name}</p>
@@ -74,7 +76,7 @@ export default function HoverCardd({
         )}
 
 
-        <HoverCard.Arrow className="fill-white" />
+        <HoverCard.Arrow className="fill-white z-[999]" />
       </HoverCard.Content>
     </HoverCard.Root>
   );

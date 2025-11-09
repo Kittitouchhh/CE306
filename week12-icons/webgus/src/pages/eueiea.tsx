@@ -1,7 +1,7 @@
 import HoverCardd from "../components/HoverCard";
 import Header from "../components/header";
 
-export default function Home() {
+export default function Eueiea() {
     return (
         <div>
             <div>
@@ -60,20 +60,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex flex-col ">
-                <div className="sticky top-[350px] z-40 w-full bg-[#181818] py-4 flex justify-center">
+                <div className="mt-50 w-full bg-[#181818] py-4 flex justify-center">
                     <Header />
-                </div>
-
-                <div className="bg-white w-full h-80 mt-60 text-left ">
-                    <p className="text-black text-center m-2 font-bold ">แนะนำตัว</p>
-                    <p className="text-black text-left m-2 ml-5 ">สวัสดีครับ ชื่อ นายกัส สกุลศักดิ์พินิจ อายุ น้อย หน้าตาดี นิสัยดี</p>
-                    <p className="text-black text-left m-2 ">งานอดิเรก ชอบเขียนเว็บ เเต่หลังๆเริ่มไม่ชอบเเล้ว ปวดหัว</p>
-                    <p className="text-black text-left m-2 ">ขับมอไซต์เก่งมาก พริ้วจัด เเต่เกือบโดนชนบ่อยเหมือนกัน </p>
-                    <div className="flex">
-                        <p className="text-black text-left m-2 font-bold">สถิติ : </p>
-                        <p className="text-black text-left my-2 ">ขับรถชน : 1 โดนด่า : 41 ผ่าไฟเเดง : 20 หลงทาง : 162</p>
-                    </div>
-                    
                 </div>
             </div>
         </div>
