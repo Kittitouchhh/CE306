@@ -39,17 +39,17 @@ export default function Contact() {
                 />
                 <HoverCardd
                     platform="line"
-                    avatar="/photo/linepf.png"
-                    name="Guss Line"
-                    username="@guss_1234"
+                    avatar="/photo/pfgh.png"
+                    name="G"
+                    username="0813996955"
                     link="https://line.me/ti/p/xxxx"
                 />
                 <HoverCardd
                     platform="gmail"
-                    avatar="/photo/pfig.jpg"
-                    name="Email Me"
-                    username="guss@gmail.com"
-                    link="mailto:guss@gmail.com"
+                    avatar="/photo/pfem.jpg"
+                    name="Kittitouch Sakulsakpinit"
+                    username="66111596@dpu.ac.th"
+                    link="https://mail.google.com/mail/u/2/?ogbl#inbox?compose=DmwnWrRnZFNxRSMlkXXBQgGspJrRClVjCHLJtMtrpBPLDVRQlWrfrRQLxQtQkNglzbxgzjPWHRNL"
                 />
 
 
